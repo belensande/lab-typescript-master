@@ -1,8 +1,8 @@
 "use strict";
 exports.__esModule = true;
 var Todo = (function () {
-    function Todo(toDoList) {
-        this.toDoList = toDoList;
+    function Todo() {
+        this.toDoList = [];
     }
     Todo.prototype.addTask = function (task) {
         console.log("Inserting " + task);
@@ -10,7 +10,7 @@ var Todo = (function () {
     };
     Todo.prototype.listAllTasks = function () {
         console.log('Tasks:');
-        this.toDoList.forEach(function (task) { return console.log(task); });
+        this.toDoList.forEach(function (task) { console.log(task); });
     };
     Todo.prototype.deleteTask = function (task) {
         console.log("Deleting " + task);
@@ -19,7 +19,7 @@ var Todo = (function () {
     };
     return Todo;
 }());
-var myTodos = new Todo([]);
+var myTodos = new Todo();
 console.log("Number of items:", myTodos.addTask('This is our first task'));
 console.log("Number of items:", myTodos.addTask('Eat pizza 🍕 yummy!!!'));
 console.log("Number of items:", myTodos.addTask('Finish this iteration 1!! 🤓'));
